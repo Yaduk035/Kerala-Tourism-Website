@@ -12,6 +12,8 @@
 		font-size: 11pt;
 		font-weight: 300;
 		color: #656565;
+		background-image: url(../images/gradient4.jpg);
+		background-size: contain;
 	}
 	
 	
@@ -74,11 +76,7 @@
 	{
 		font-family: Arial, Helvetica, sans-serif;
 	}
-	
-	#featured
-	{
-		margin-top: 10px;
-	}
+
 	.card
 	{
 		margin: 20px;
@@ -94,39 +92,10 @@
 		transition: 0.4s ease-in-out;
 	}
 
-
-	.image img
+	.card
 	{
-		display: block;
-		width: 100%;
+		box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;																						
 	}
-	
-	.image-full
-	{
-		display: block;
-		width: 100%;
-		margin: 0 0 2em 0;
-	}
-	
-	.image-left
-	{
-		float: left;
-		margin: 0 2em 2em 0;
-	}
-	
-	.image-centered
-	{
-		display: block;
-		margin: 0 0 2em 0;
-	}
-	
-	.image-centered img
-	{
-		margin: 0 auto;
-		width: auto;
-	}
-
-
 	ul.staff
 	{
 		margin-bottom: 3em;
@@ -243,81 +212,6 @@
 	}
 
 
-	.box1,
-	.box2,
-	.box3,
-	.box4
-	{
-		width: 235px;
-	}
-	
-	.box1,
-	.box2,
-	.box3,
-	{
-		float: left;
-		margin-right: 20px;
-	}
-	
-	.box4
-	{
-		float: right;
-	}
-	
-
-	.boxA,
-	.boxB,
-	.boxC
-	{
-		width: 320px;
-	}
-
-	.boxA,
-	.boxB
-	{
-		float: left;
-		margin-right: 20px;
-	}
-	
-	.boxC
-	{
-		float: right;
-	}
-
-
-
-	.tbox1,
-	.tbox2
-	{
-		width: 575px;
-	}
-	
-	.tbox1
-	{
-		float: left;
-	}
-
-	.tbox2
-	{
-		float: right;
-	}
-	
-	#wrapper
-	{
-		background: #FFF;
-	}
-
-	#header-wrapper
-	{
-		background: #af1641;
-	}
-
-	#header
-	{
-		position: relative;
-		padding: 3em 0em;
-	}
-
 
 
 	#logo
@@ -339,52 +233,6 @@
 		color: #FFF;
 	}
 
-
-	#menu
-	{
-		position: absolute;
-		top: 2em;
-		right: 0;
-	}
-	
-	#menu ul
-	{
-		display: inline-block;
-	}
-	
-	#menu li
-	{
-		display: block;
-		float: left;
-		text-align: center;
-	}
-	
-	#menu li a, #menu li span
-	{
-		padding: 1em 1.5em;
-		letter-spacing: 1px;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 0.8em;
-		color: #FFF;
-	}
-	
-	#menu li:hover a, #menu li.active a, #menu li.active span
-	{
-		background: #dc572e;
-		border-radius: 7px;
-		color: #FFF;
-	}
-	
-	#menu .current_page_item a
-	{
-		background: #af1641;
-		color: #FFF;
-	}
-	
-	#menu .icon
-	{
-	}
 
 
 	#banner
@@ -426,7 +274,7 @@
 	
 	.navbar
 	{
-		background: #af1641 !important;
+		background-color: rgb(56, 68, 4);
 	}
 	 
 
@@ -444,85 +292,7 @@
 		border-radius: 10px;
 	}
 
-	.col2 
-	{
-		margin-top: 0;
-		margin-left: 30%;
-		margin-right: 30%;
-
-	#page
-	{
-		padding: 5em 0em;
-		text-align: center;
-	}
 	
-	
-	#page .button
-	{
-		margin-top: 2em;
-		display: inline-block;
-		text-align: center;
-	}
-
-
-	#copyright
-	{
-		overflow: hidden;
-		padding: 5em 0em;
-		border-top: 1px solid rgba(255,255,255,0.08);
-	}
-	
-	#copyright p
-	{
-		text-align: center;
-		font-size: 1em;
-		color: rgba(255,255,255,0.5);
-	}
-	
-	#copyright a
-	{
-		text-decoration: none;
-		color: rgba(255,255,255,0.8);
-	}
-
-
-	#featured
-	{
-		overflow: hidden;
-		padding: 5em 0em;
-		background: #af1641;
-		color: rgba(255,255,255,.8);
-		text-align: center;
-	}
-
-	#featured a
-	{
-		color: rgba(255,255,255,1);
-	}
-	
-	#featured .button
-	{
-		background: #FFF;
-		margin-top: 3em;
-		font-size: 1em;
-		color: #af1641;
-	}
-
-	#featured img
-	{
-		margin-bottom: 3em;
-		border-radius: 7px;
-	}
-
-	#featured .title h2
-	{
-		color: #FFF;
-	}
-
-	#featured .title .byline
-	{
-		color: rgba(255,255,255,.6);
-	}
 
 
 .box
@@ -534,29 +304,12 @@
 }
 
 
-	#extra
-	{
-		overflow: hidden;
-		padding: 5em 0em;
-	}
-	
-	#extra .title
-	{
-		text-align: center;
-	}
-	
-	#extra .button
-	{
-		margin-top: 5em;
-	}
-	
-	#extra .fa
-	{
-		display: block;
-		margin-bottom: 0.5em;
-		text-align: center;
-		font-size: 3em;
+
+	.dropdown- {
+		background-color: #2DAAE4;
 	}
 
-
+	.carousel-inner {
+		border-radius: 0px 0px 10px 10px;
+	}
 

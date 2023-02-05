@@ -1,0 +1,48 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background: #333333;
+    font-family: 'Varela', sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+    color: #656565;
+    background-image: url(../images/gradient4.jpg);
+    background-size: contain;
+}
+.container
+{
+    margin-top: 10%;
+    overflow: hidden;
+    margin: 0em auto;
+    width: 1000px;
+}
+
+.navbar
+{
+    background-color: rgb(56, 68, 4);
+}
+ 
+
+.collapse a
+{
+ color: #dadae6
+}
+.nav-item
+{
+    text;
+}
+
+.card
+{
+    margin: 50px;
+   	box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;																						
+
+}
+
+
+
+.card
+{
+    background-size: cover;
+}
