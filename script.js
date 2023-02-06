@@ -25,6 +25,59 @@ function validateName(){
     }
 }
 
+
+function validateEmail() {
+
+    let regExEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+
+    let email = document.getElementById('email')
+    let email_error = document.getElementById('email-error')
+    
+    if (email.value.trim() ==''){
+        email_error.innerHTML = "E-mail cannot be blank"
+        return false
+    }
+    
+    else if (!email.value.match(regExEmail)) {
+        email_error.innerHTML = "E-mail format error"
+        return false
+    }
+
+
+    else {
+        email_error.innerHTML = "✔"
+        return true
+    }
+}
+
+
+function validatePhn() {
+
+    let regExPhn = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/g
+
+    let phn = document.getElementById('phn')
+    let phn_error = document.getElementById('phn-error')
+    
+    if (!phn.value.trim() ==''){
+        phn_error.innerHTML = "Phone no. cannot "
+        return false
+    }
+    
+    else if (!phn.value.match(regExEmail)) {
+        phn_error.innerHTML = "Phone no. format error"
+        return false
+    }
+
+
+    else {
+        phn_error.innerHTML = "✔"
+        return true
+    }
+}
+
+
+
+
 function validatePassword(){
     
     let password = document.getElementById('password')
@@ -32,7 +85,7 @@ function validatePassword(){
 
     console.log(password.value)
     if (password.value.trim() ==''){
-        password_error.innerHTML = "Password cannot be lsft blank"
+        password_error.innerHTML = "Password cannot be left blank"
         return false
     }
 
@@ -54,7 +107,7 @@ function validatePassword(){
 }
 
 function validateForm(){
-    if (!validateName() || !validatePassword() ) {
+    if (!validateName() || !validatePassword() || !validateEmail() ) {
         return false
     }
     else{
