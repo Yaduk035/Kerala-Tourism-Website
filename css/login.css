@@ -1,9 +1,18 @@
+html, body
+{
+  height: 100%;
+}
+
+
+
+
 body 
 {
   font-family:sans-serif; 
-  background: -webkit-linear-gradient(to right, #155799, #159957);  
-  background: linear-gradient(to right, #155799, #159957); 
-  color:whitesmoke;
+  background-image: url(../images/Bluredimg.jpg);
+  background-size: cover;
+  /* background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke; */
 }
 
 
@@ -110,3 +119,39 @@ span.forgotpsd a {
       width: 20rem;
     }
   }
+
+  .navbar
+	{
+		background-image: url(../images/gradient7\(1\).jpg);
+    background-size: cover;
+	}
+
+  .box
+{
+	padding: 3em 2em 2em 2em;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 8px;
+		text-align: center;
+}
+
+#logo1
+{
+  margin-left: 100px;
+  border-radius: 10px;
+}
+
+
+.collapse a
+{
+ color: #dadae6
+}
+
+#flexCheckDefault
+{
+  margin-left: 35%;
+}
+
+#btn
+{
+  border-radius: 10px;
+}

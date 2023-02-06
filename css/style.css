@@ -200,7 +200,7 @@
 		margin-top: 30px;
 		text-align: center;
 		text-transform: none;
-		color: #b3e77e !important;
+		color: #213111 !important;
 		font-size: 2.7em;
 	}
 	
@@ -211,9 +211,7 @@
 		color: #6F6F6F;
 	}
 
-
-
-
+	
 	#logo
 	{
 		position: absolute;
@@ -274,7 +272,9 @@
 	
 	.navbar
 	{
-		background-color: rgb(56, 68, 4);
+		/* background-color: rgb(175, 12, 12); */
+		background-image: url(../images/gradient7\(1\).jpg);
+		background-size: cover;
 	}
 	 
 

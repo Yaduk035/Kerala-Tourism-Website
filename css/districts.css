@@ -46,3 +46,13 @@ body
 {
     background-size: cover;
 }
+
+#logo1
+{
+  margin-left: 100px;
+  border-radius: 10px;
+}
+
+.card-header{
+    
+}
