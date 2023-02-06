@@ -20,7 +20,8 @@ body
 
 .navbar
 {
-    background-color: rgb(56, 68, 4);
+    background-image: url(../images/gradient7\(1\).jpg);
+    background-size: cover;
 }
  
 

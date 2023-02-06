@@ -59,7 +59,7 @@ function validatePhn() {
     let phn_error = document.getElementById('phn-error')
     
     if (!phn.value.trim() ==''){
-        phn_error.innerHTML = "Phone no. cannot "
+        phn_error.innerHTML = ""
         return false
     }
     
@@ -93,6 +93,11 @@ function validatePassword(){
         password_error.innerHTML = "Password must contain atleast 8 characters"
         return false
     }
+
+    // else if (password.value<13){
+    //     password_error.innerHTML = "🟢"
+    //     return true
+    // }
 
     else if (password.value.length>20){
         password_error.innerHTML = "Password should not exceed 20 characters"
