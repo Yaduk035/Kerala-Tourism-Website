@@ -1,0 +1,41 @@
+.form
+{
+    border: 1px solid black;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.form
+{
+    padding: 2%;
+}
+
+.container
+{
+    padding-top: 5%;
+}
+
+.navbar
+{
+    background-image: url(../images/gradient7.jpg);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+.nav-item :hover
+{
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#logo1
+{
+    margin-left: 100px;
+    border-radius: 10px;
+}
+
+#password-error
+{
+    max-width: 200px;
+}

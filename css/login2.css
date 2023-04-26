@@ -56,3 +56,13 @@ background-size: cover;
 span{
     color: red;
 }
+
+.container
+{
+  text-align: center;
+}
+
+.container
+{
+  border: 10px solid black;
+}

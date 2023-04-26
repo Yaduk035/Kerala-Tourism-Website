@@ -1,124 +1,76 @@
-function validateName(){
-
-    let username = document.getElementById('username')
-    let name_error = document.getElementById('name-error')
-    
-    console.log(username.value)
-    if (username.value.trim() ==''){
-        name_error.innerHTML = "Username cannot be blank"
-        return false
-    }
-    
-    else if (username.value.length<3){
-        name_error.innerHTML = "Username must contain atleast 3 characters"
-        return false
-    }
-
-    else if (username.value.length>20){
-        name_error.innerHTML = "Username should not exceed 20 characters"
-        return false
-    }
-
-    else {
-        name_error.innerHTML = "✔"
-        return true
-    }
-}
-
-
 function validateEmail() {
+    const email = document.getElementById("email").value.trim();
+    const emailError = document.getElementById("email-error");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+    if (email === "") {
+      emailError.innerText = "Email is required";
+      return false;
+    } else if (!emailRegex.test(email)) {
+      emailError.innerText = "Invalid email format";
+      return false;
+    } else {
+      emailError.innerText = "";
+      return true;
+    }
+  }
 
-    let regExEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
-
-    let email = document.getElementById('email')
-    let email_error = document.getElementById('email-error')
+  // function to validate phone number format
+function validatePhone() {
+    const phone = document.getElementById("phonenumber").value.trim();
+    const phoneError = document.getElementById("phone-error");
+    const phoneRegex = /^(\d{3})[-. ]?(\d{3})[-. ]?(\d{4})$/;
+  
+    if (phone === "") {
+      phoneError.innerText = "Phone number is required";
+      return false;
+    } else if (!/^\d{10}$/.test(phone) && !phoneRegex.test(phone)) {
+      phoneError.innerText = "Invalid phone number format";
+      return false;
+    } else {
+      phoneError.innerText = "";
+      return true;
+    }
+  }
+  function validatePassword() {
+    const password = document.getElementById("password").value.trim();
+    const password2 = document.getElementById("password2").value.trim();
+    const passwordError = document.getElementById("password-error");
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+=[\]{}|\\';:/?.>,<^-]).{8,}$/;
+  
+    if (password === "") {
+      passwordError.innerText = "Password is required";
+      return false;
+    } else if (!passwordRegex.test(password)) {
+      passwordError.innerText = "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number";
+      return false;
+    } else if (password !== password2) {
+      passwordError.innerText = "Passwords do not match";
+      return false;
+    } else {
+      // determine password strength
+      let strength = "";
+      if (passwordRegex.test(password)) {
+        strength = "strong";
+        passwordError.style.color = "green";
+      } else if (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*()_+=[\]{}|\\';:/?.>,<^-]{8,}$/.test(password)) {
+        strength = "medium";
+        passwordError.style.color = "orange";
+      } else {
+        strength = "poor";
+        passwordError.style.color = "red";
+      }
+      passwordError.innerText = `Password strength: ${strength}  Passwords match!`;
+      return true;
+    }
+  }
+  
+  // function to validate the entire form
+  function validateForm() {
+    if (!validateEmail() || !validatePhone() || !validatePassword()) {
+      return false;
+    } else {
+      return true;
+    }
+  }
     
-    if (email.value.trim() ==''){
-        email_error.innerHTML = "E-mail cannot be blank"
-        return false
-    }
-    
-    else if (!email.value.match(regExEmail)) {
-        email_error.innerHTML = "E-mail format error"
-        return false
-    }
-
-
-    else {
-        email_error.innerHTML = "✔"
-        return true
-    }
-}
-
-
-function validatePhn() {
-
-    let regExPhn = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/g
-
-    let phn = document.getElementById('phn')
-    let phn_error = document.getElementById('phn-error')
-    
-    if (!phn.value.trim() ==''){
-        phn_error.innerHTML = ""
-        return false
-    }
-    
-    else if (!phn.value.match(regExEmail)) {
-        phn_error.innerHTML = "Phone no. format error"
-        return false
-    }
-
-
-    else {
-        phn_error.innerHTML = "✔"
-        return true
-    }
-}
-
-
-
-
-function validatePassword(){
-    
-    let password = document.getElementById('password')
-    let password_error = document.getElementById('password-error')
-
-    console.log(password.value)
-    if (password.value.trim() ==''){
-        password_error.innerHTML = "Password cannot be left blank"
-        return false
-    }
-
-    else if (password.value.length<8){
-        password_error.innerHTML = "Password must contain atleast 8 characters"
-        return false
-    }
-
-    // else if (password.value<13){
-    //     password_error.innerHTML = "🟢"
-    //     return true
-    // }
-
-    else if (password.value.length>20){
-        password_error.innerHTML = "Password should not exceed 20 characters"
-        return false
-    }
-
-    else {
-        password_error.innerHTML = "✔"
-        return true
-    }
-
-}
-
-function validateForm(){
-    if (!validateName() || !validatePassword() || !validateEmail() ) {
-        return false
-    }
-    else{
-        return true
-    }
-
-
-
-}
