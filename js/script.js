@@ -34,10 +34,12 @@ function validatePhone() {
   function validatePassword() {
     var password = document.getElementById("password").value;
     var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+=[\]{}|\\';:/?.>,<^-]).{8,}$/;
+    var passwordError = document.getElementById("password-error");
     
     if (regex.test(password)) {
       return true;
     } else {
+      passwordError.innerText = "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number";
       return false;
     }
   }  
