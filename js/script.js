@@ -15,7 +15,6 @@ function validateEmail() {
     }
   }
 
-  // function to validate phone number format
 function validatePhone() {
     const phone = document.getElementById("phonenumber").value.trim();
     const phoneError = document.getElementById("phone-error");
@@ -33,39 +32,16 @@ function validatePhone() {
     }
   }
   function validatePassword() {
-    const password = document.getElementById("password").value.trim();
-    const password2 = document.getElementById("password2").value.trim();
-    const passwordError = document.getElementById("password-error");
-    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+=[\]{}|\\';:/?.>,<^-]).{8,}$/;
-  
-    if (password === "") {
-      passwordError.innerText = "Password is required";
-      return false;
-    } else if (!passwordRegex.test(password)) {
-      passwordError.innerText = "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number";
-      return false;
-    } else if (password !== password2) {
-      passwordError.innerText = "Passwords do not match";
-      return false;
-    } else {
-      // determine password strength
-      let strength = "";
-      if (passwordRegex.test(password)) {
-        strength = "strong";
-        passwordError.style.color = "green";
-      } else if (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*()_+=[\]{}|\\';:/?.>,<^-]{8,}$/.test(password)) {
-        strength = "medium";
-        passwordError.style.color = "orange";
-      } else {
-        strength = "poor";
-        passwordError.style.color = "red";
-      }
-      passwordError.innerText = `Password strength: ${strength}  Passwords match!`;
+    var password = document.getElementById("password").value;
+    var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+=[\]{}|\\';:/?.>,<^-]).{8,}$/;
+    
+    if (regex.test(password)) {
       return true;
+    } else {
+      return false;
     }
-  }
+  }  
   
-  // function to validate the entire form
   function validateForm() {
     if (!validateEmail() || !validatePhone() || !validatePassword()) {
       return false;

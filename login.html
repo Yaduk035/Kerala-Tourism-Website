@@ -38,24 +38,29 @@
 	  </nav>
 
     <div class="container d-flex justify-content-center align-items-center">
-      <form class="form mw-100 bg-dark bg-opacity-20 bg-gradient text-white" style="max-width: 400px;">
+      <form class="form mw-100 bg-dark bg-opacity-20 bg-gradient text-white" style="max-width: 400px;" action="success.html">
+        <h3 class="text-light" id="formhd">Log In</h3>
+        <br>
         <div>
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="email" aria-describedby="emailHelp" onkeyup="validateEmail()">
-                  <div id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</div>
+                  <div id="email-error" class="form-text text-white"></div>
                   <label for="phonenumber" class="form-label">Phone No.</label>
-                  <input type="number" class="form-control" id="phone"  onkeyup="validatePhone()" aria-describedby="emailHelp">
-<br>
+                  <input type="number" class="form-control" id="phonenumber"  onkeyup="validatePhone()" aria-describedby="emailHelp">
+                  <div id="phone-error" class="form-text text-white"></div>
+
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Enter Password</label>
                   <input type="password" class="form-control" id="password" onkeyup="validatePassword()">
+                  <div id="password-error" class="form-text text-white"></div>
+                  
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Remember Me!</label>
                   </div>
-                <button type="submit" class="btn btn-light">Submit</button>
+                <button type="submit" class="btn btn-light" id="submit" onclick="return validateForm()" >Log In!</button>
               </form>                    
     </div>
 <script src="../Kerala-Tourism-Website/js/script.js"></script>

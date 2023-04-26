@@ -1,3 +1,9 @@
+body
+{
+    background-image: url(../images/Bluredimg.jpg);
+    background-size:auto;
+}
+
 .form
 {
     border: 1px solid black;
@@ -11,12 +17,14 @@
 
 .container
 {
-    padding-top: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .navbar
 {
     background-image: url(../images/gradient7.jpg);
+    background-size: cover;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -38,4 +46,13 @@
 #password-error
 {
     max-width: 200px;
+}
+
+#formhd
+{
+    font-family:monospace;
+}
+
+.form{
+    box-shadow: 7px 7px 30px black;
 }

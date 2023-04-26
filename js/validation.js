@@ -1,4 +1,3 @@
-// function to validate email format
 function validateEmail() {
   const email = document.getElementById("email").value.trim();
   const emailError = document.getElementById("email-error");
@@ -16,7 +15,7 @@ function validateEmail() {
   }
 }
 
-// function to validate phone number format
+
 function validatePhone() {
   const phone = document.getElementById("phonenumber").value.trim();
   const phoneError = document.getElementById("phone-error");
@@ -34,7 +33,7 @@ function validatePhone() {
   }
 }
 
-// function to validate password format and strength
+
 function validatePassword() {
   const password = document.getElementById("password").value.trim();
   const password2 = document.getElementById("password2").value.trim();
@@ -68,7 +67,6 @@ function validatePassword() {
   }
 }
 
-// function to validate the entire form
 function validateForm() {
   if (!validateEmail() || !validatePhone() || !validatePassword()) {
     return false;
@@ -77,18 +75,7 @@ function validateForm() {
   }
 }
 
-// // function to validate username (if required)
-// function validateName() {
-//   const name = document.getElementById("username").value.trim();
-//   const nameError = document.getElementById("name-error");
 
-//   // validation criteria for username can be added here
-
-//   nameError.innerText = "";
-//   return true;
-// }
-
-// // add event listeners to the input fields
 // document.getElementById("email").addEventListener("keyup", validateEmail);
 // document.getElementById("phonenumber").addEventListener("keyup", validatePhone);
 // document.getElementById("password").addEventListener("keyup", validatePassword);
